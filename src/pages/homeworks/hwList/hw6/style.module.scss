@@ -1,0 +1,89 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  textarea {
+    width: 100%;
+    resize: none;
+    &::placeholder {
+      color: red;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 70%;
+  max-width: 400px;
+  border: 1px solid black;
+  padding: 20px;
+  gap: 10px;
+}
+
+.inputGroup {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+
+  input {
+    height: 40px;
+    width: 100%;
+
+    &::placeholder {
+      color: red;
+    }
+  }
+}
+
+.subject {
+  height: 40px;
+  width: 100%;
+  &::placeholder {
+    color: red;
+  }
+}
+
+.sendBtn {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  color: red;
+}
+
+@media screen and (min-width: 768px) {
+  .root {
+    textarea::placeholder {
+      color: black;
+    }
+  }
+  .inputGroup {
+    flex-direction: row;
+
+    input {
+      height: auto;
+      &::placeholder {
+        color: black;
+      }
+    }
+  }
+
+  .subject::placeholder {
+    color: black;
+  }
+
+  .sendBtn {
+    width: auto;
+    color: black;
+  }
+}

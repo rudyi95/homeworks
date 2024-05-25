@@ -1,12 +1,12 @@
 import React from "react";
 
-import "./style.css";
+import styles from "./style.module.scss";
 
 export const Homework2: React.FC = () => {
   return (
-    <div>
+    <div className={styles.root}>
       <h1>Домашнє завдання 2</h1>
-      <ol>
+      <ol className={styles.content}>
         <li>
           <div>
             <form>
@@ -90,21 +90,29 @@ export const Homework2: React.FC = () => {
               <span>Lorem</span> ipsum dolor sit amet consectetur adipisicing elit.
             </p>
             {/* <!-- 2 --> */}
-            <p className="black_bg">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p className={styles.black_bg}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
             {/* <!-- 3 --> */}
             <p>
               <span>Lorem</span> ipsum dolor sit amet consectetur adipisicing elit.
             </p>
             {/* <!-- 4 --> */}
-            <p className="black_bg">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p className={styles.black_bg}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
             {/* <!-- 5 --> */}
             <p>
               <span>Lorem</span> ipsum dolor sit amet consectetur adipisicing elit.
             </p>
             {/* <!-- 6 --> */}
-            <p className="black_bg">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p className={styles.black_bg}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
             {/* <!-- 7 --> */}
-            <p id="paragraph_seven">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p className={styles.paragraph_seven}>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
             {/* <!-- 8 --> */}
             <p>
               <span>Lorem</span> ipsum dolor sit amet consectetur adipisicing elit.

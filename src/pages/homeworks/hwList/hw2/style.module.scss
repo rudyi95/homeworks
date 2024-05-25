@@ -1,0 +1,39 @@
+.root {
+  h1 {
+    text-decoration: underline;
+    margin: auto;
+    width: fit-content;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px double black;
+  }
+
+  p {
+    font-size: 25px;
+  }
+
+  span {
+    color: red;
+  }
+}
+.content {
+  display: flex;
+  justify-content: space-around;
+}
+.paragraph_seven {
+  border: 3px solid blue;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.black_bg {
+  background-color: black;
+  color: white;
+  font-size: 27px;
+  font-style: italic;
+  text-decoration: underline;
+  border: none;
+}
