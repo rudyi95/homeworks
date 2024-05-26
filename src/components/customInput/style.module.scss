@@ -1,0 +1,16 @@
+.root {
+  display: flex;
+  flex-direction: column;
+}
+
+.subTitle {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 16;
+  color: #132c4a;
+}
+
+.error {
+  color: "red";
+  font-size: 12px;
+}
