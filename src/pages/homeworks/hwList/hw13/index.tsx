@@ -52,6 +52,8 @@ export const Homework13: React.FC = () => {
     formik.setFieldValue(e.target.name, +e.target.value);
   };
 
+  const percent = formik.values.second.months < 6 ? 15 : formik.values.second.months > 9 ? 17 : 16;
+
   return (
     <form>
       <Box>
@@ -67,11 +69,24 @@ export const Homework13: React.FC = () => {
           </ListItem>
           <ListItem>
             <Box display="flex" flexDirection="column" gap="10px">
-              <Typography>
-                2. Get information about how much a person will earn during this period of time
-              </Typography>
-              <Box display="flex" gap="20px">
-                <Box>
+              <Box>
+                <Typography>
+                  2. Get information about how much a person will earn during this period of time
+                </Typography>
+                <List>
+                  <ListItem>
+                    <Typography>{`--Till 6 months - 15%`}</Typography>
+                  </ListItem>
+                  <ListItem>
+                    <Typography>{`--Between 6 and 9 months - 16% `}</Typography>
+                  </ListItem>
+                  <ListItem>
+                    <Typography>{`--From 9 - 17 %`}</Typography>
+                  </ListItem>
+                </List>
+              </Box>
+              <Box display="flex" flexDirection="column" gap="20px">
+                <Box display="flex" gap="20px">
                   <CustomInput
                     name="second.name"
                     label="Name"
@@ -94,7 +109,7 @@ export const Homework13: React.FC = () => {
                     maxNumber={72}
                   />
                 </Box>
-                <Box display="flex" flexDirection="column" justifyContent="center" gap="20px">
+                <Box display="flex" justifyContent="center" gap="20px">
                   <Button
                     onClick={(e) =>
                       !formik.values.second.name ||
@@ -116,11 +131,11 @@ export const Homework13: React.FC = () => {
                     ? `Dear ${
                         !!formik.values.second.name ? formik.values.second.name : "___"
                       }, You have entered ${formik.values.second.amount}
-                UAH., at 20% per annum for a period of ${
-                  formik.values.second.months
-                } months. During this period of
+                UAH., at ${percent}% per annum for a period of ${
+                        formik.values.second.months
+                      } months. During this period of
                 time, you will earn ${(
-                  (((formik.values.second.amount / 100) * 20) / 12) *
+                  (((formik.values.second.amount / 100) * percent) / 12) *
                   formik.values.second.months
                 ).toFixed(2)} hryvnias.`
                     : ""}

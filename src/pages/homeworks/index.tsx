@@ -5,7 +5,7 @@ import { HWComponent } from "src/components";
 
 import { hwEnums } from "src/types/enums";
 
-const listOfPages = ["hw1", "hw2", "hw3", "hw4", "hw5", "hw6", "hw7", "hw13"];
+const listOfPages = ["hw1", "hw2", "hw3", "hw4", "hw5", "hw6", "hw7", "hw13", "hw14", "hw16"];
 const links = ["https://rudyi95.github.io/shop-pp/"];
 
 const Homeworks: React.FC = () => {

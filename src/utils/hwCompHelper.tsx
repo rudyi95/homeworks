@@ -6,6 +6,8 @@ import { Homework5 } from "src/pages/homeworks/hwList/hw5";
 import { Homework6 } from "src/pages/homeworks/hwList/hw6";
 import { Homework7 } from "src/pages/homeworks/hwList/hw7";
 import { Homework13 } from "src/pages/homeworks/hwList/hw13";
+import { Homework14 } from "src/pages/homeworks/hwList/hw14";
+import { Homework16 } from "src/pages/homeworks/hwList/hw16";
 import { hwEnums } from "src/types/enums";
 
 const homeworks = {
@@ -17,6 +19,8 @@ const homeworks = {
     [hwEnums.homework6]: Homework6,
     [hwEnums.homework7]: Homework7,
     [hwEnums.homework13]: Homework13,
+    [hwEnums.homework14]: Homework14,
+    [hwEnums.homework16]: Homework16,
 }
 
 export function getHWComp(type: hwEnums): React.FC {
