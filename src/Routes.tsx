@@ -10,7 +10,7 @@ const Routers: React.FC = () => {
     <Routes>
       <Route path="homeworks" element={<Layout />}>
         <Route index element={<Homeworks />} />
-        <Route path=":number" element={<Homeworks />} />
+        <Route path=":slug" element={<Homeworks />} />
       </Route>
     </Routes>
   );

@@ -1,62 +1,28 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-import { Homework1 } from "./hwList/hw1";
-import { Homework2 } from "./hwList/hw2";
-import { Homework3 } from "./hwList/hw3";
-import { Homework4 } from "./hwList/hw4";
-import { Homework5 } from "./hwList/hw5";
-import { Homework6 } from "./hwList/hw6";
-import { Homework7 } from "./hwList/hw7";
+import { HWComponent } from "src/components";
 
-const listOfPages = [
-  <Homework1 />,
-  <Homework2 />,
-  <Homework3 />,
-  <Homework4 />,
-  <Homework5 />,
-  <Homework6 />,
-  <Homework7 />,
-  <Homework7 />,
-  <Homework7 />,
-  <Homework7 />,
-  <Homework7 />,
-  <Homework7 />,
-  <Homework7 />,
-  <Homework7 />,
-  <Homework7 />,
-  <Homework7 />,
-  <Homework7 />,
-  <Homework7 />,
-  <Homework7 />,
-  <Homework7 />,
-];
+import { hwEnums } from "src/types/enums";
+
+const listOfPages = ["hw1", "hw2", "hw3", "hw4", "hw5", "hw6", "hw7"];
 
 const Homeworks: React.FC = () => {
-  const { number } = useParams<any>();
+  const { slug } = useParams<any>();
   const navigate = useNavigate();
 
-  const [state, setState] = useState(1);
-
-  const handleClick = (number: number) => {
-    setState(number);
-    navigate(`/homeworks/${number}`);
+  const handleClick = (slug: string) => {
+    navigate(`/homeworks/${slug}`);
   };
-
-  useEffect(() => {
-    if (!!number) {
-      setState(+number);
-    }
-  }, []);
 
   return (
     <div>
       <div>
-        {listOfPages.map((_, index) => {
-          return <button onClick={() => handleClick(index++)}>Homework {++index}</button>;
+        {listOfPages.map((page, index) => {
+          return <button onClick={() => handleClick(page)}>Homework {++index}</button>;
         })}
       </div>
-      {listOfPages[state - 1]}
+      <HWComponent type={slug as hwEnums} />
     </div>
   );
 };
