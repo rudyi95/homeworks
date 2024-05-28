@@ -5,8 +5,8 @@ import { HWComponent } from "src/components";
 
 import { hwEnums } from "src/types/enums";
 
-const listOfPages = ["hw1", "hw2", "hw3", "hw4", "hw5", "hw6", "hw7", "hw13", "hw14", "hw16"];
-const links = ["https://rudyi95.github.io/shop-pp/"];
+const listOfPages = ["hw1", "hw2", "hw3", "hw4", "hw5", "hw6", "hw7", "hw13", "hw14", "hw16", 'hw19'];
+const links = ["https://rudyi95.github.io/shop-pp/", "https://rudyi95.github.io/runo/"];
 
 const Homeworks: React.FC = () => {
   const { slug } = useParams<any>();
@@ -30,7 +30,7 @@ const Homeworks: React.FC = () => {
           );
         })}
       </div>
-      <HWComponent type={slug as hwEnums} />
+      <HWComponent type={!slug ? hwEnums.homework1 : slug as hwEnums} />
     </div>
   );
 };

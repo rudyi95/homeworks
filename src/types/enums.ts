@@ -9,4 +9,5 @@ export const enum hwEnums {
   homework13 = "hw13",
   homework14 = "hw14",
   homework16 = "hw16",
+  homework19 = "hw19",
 }
