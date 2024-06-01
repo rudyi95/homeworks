@@ -16,6 +16,8 @@ const Homeworks: React.FC = () => {
     navigate(`/homeworks/${slug}`);
   };
 
+  console.log('slug', slug)
+
   return (
     <div>
       <div>
