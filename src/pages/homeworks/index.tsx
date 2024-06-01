@@ -13,7 +13,7 @@ const Homeworks: React.FC = () => {
   const navigate = useNavigate();
 
   const handleClick = (slug: string) => {
-    navigate(`/homeworks/${slug}`);
+    navigate(`/${slug}`);
   };
 
   return (

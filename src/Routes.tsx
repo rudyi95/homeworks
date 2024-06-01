@@ -8,7 +8,7 @@ import Homeworks from "src/pages/homeworks";
 const Routers: React.FC = () => {
   return (
     <Routes>
-      <Route path="homeworks" element={<Layout />}>
+      <Route path="/" element={<Layout />}>
         <Route index element={<Homeworks />} />
         <Route path=":slug" element={<Homeworks />} />
       </Route>
