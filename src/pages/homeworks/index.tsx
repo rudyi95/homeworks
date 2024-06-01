@@ -16,37 +16,6 @@ const Homeworks: React.FC = () => {
     navigate(`/homeworks/${slug}`);
   };
 
-  console.log('slug', slug)
-  const renderContent = () => {
-    switch (slug) {
-      case 'hw1':
-        return <HWComponent type={slug as hwEnums} />
-      case 'hw2':
-        return <HWComponent type={slug as hwEnums} />
-      case 'hw3':
-        return <HWComponent type={slug as hwEnums} />
-      case 'hw4':
-        return <HWComponent type={slug as hwEnums} />
-      case 'hw5':
-        return <HWComponent type={slug as hwEnums} />
-      case 'hw6':
-        return <HWComponent type={slug as hwEnums} />
-      case 'hw7':
-        return <HWComponent type={slug as hwEnums} />
-      case 'hw13':
-        return <HWComponent type={slug as hwEnums} />
-      case 'hw14':
-        return <HWComponent type={slug as hwEnums} />
-      case 'hw16':
-        return <HWComponent type={slug as hwEnums} />
-      case 'hw19':
-        return <HWComponent type={slug as hwEnums} />
-    
-      default:
-        return <HWComponent type={hwEnums.homework1} />
-    }
-  }
-
   return (
     <div>
       <div>
@@ -61,8 +30,7 @@ const Homeworks: React.FC = () => {
           );
         })}
       </div>
-      {renderContent()}
-      {/* <HWComponent type={!slug ? hwEnums.homework1 : slug as hwEnums} /> */}
+      <HWComponent type={!slug ? hwEnums.homework1 : slug as hwEnums} />
     </div>
   );
 };
