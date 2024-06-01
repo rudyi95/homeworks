@@ -1,4 +1,4 @@
-import React, { BaseSyntheticEvent, useState } from "react";
+import React, { BaseSyntheticEvent } from "react";
 
 import { Box, Button, Chip, Typography } from "@mui/material";
 import { CustomInput } from "src/components/customInput";
@@ -86,8 +86,6 @@ export const Homework19: React.FC = () => {
       .filter((number) => number % 2 !== 0)
       .toString();
   };
-
-  console.log(formik.errors);
 
   return (
     <Box>
