@@ -11,7 +11,8 @@ interface IProps {
   startAdornment?: React.ReactNode;
   errorText?: string | null;
   value?: Maybe<string> | Nullable<number>;
-  maxNumber?: number
+  maxNumber?: number;
+  minNumber?: number;
 }
 
 export const CustomInput: React.FC<IProps & InputBaseProps> = ({
@@ -24,6 +25,7 @@ export const CustomInput: React.FC<IProps & InputBaseProps> = ({
   errorText,
   value,
   maxNumber,
+  minNumber,
   ...props
 }) => {
   return (
@@ -39,7 +41,10 @@ export const CustomInput: React.FC<IProps & InputBaseProps> = ({
         name={name || id}
         endAdornment={adornment}
         value={value}
-        inputProps={{ max: props.type === 'number' ? maxNumber : undefined }}
+        inputProps={{
+          max: props.type === "number" ? maxNumber : undefined,
+          min: props.type === "number" ? minNumber : undefined,
+        }}
         {...props}
       />
       {errorText ? <Typography className={classes.error}>{errorText}</Typography> : null}
