@@ -4,24 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { HWComponent } from "src/components";
 
 import { hwEnums } from "src/types/enums";
-
-const listOfPages = [
-  "hw1",
-  "hw2",
-  "hw3",
-  "hw4",
-  "hw5",
-  "hw6",
-  "hw7",
-  "hw13",
-  "hw14",
-  "hw16",
-  "hw19",
-  "hw20",
-  "hw21",
-  "hw22",
-];
-const links = ["https://rudyi95.github.io/shop-pp/", "https://rudyi95.github.io/runo/"];
+import { links, listOfPages } from "src/utils/constants/common";
 
 const Homeworks: React.FC = () => {
   const { slug } = useParams<any>();
